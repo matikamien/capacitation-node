@@ -7,4 +7,4 @@ server.on("request", function(req, res) {
 	res.end("La hora actual es: " + date.getHours() + ":" + date.getMinutes());
 });
 
-server.listen(process.env.Port || 3000);
+server.listen(process.env.PORT || 3000);
