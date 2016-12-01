@@ -4,7 +4,7 @@ var server = http.createServer();
 
 server.on("request", function(req, res) {
 	var date = new Date();
-	res.end("La hora es: " + date.getHours() + ":" + date.getMinutes());
+	res.end("La hora actual es: " + date.getHours() + ":" + date.getMinutes());
 });
 
 server.listen(3000);
