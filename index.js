@@ -1,7 +1,18 @@
-var http = require("http");
+var exp = require("express");
 var url = require("url");
+var app = exp();
 
-var server = http.createServer();
+app.use(exp.static('public'));
+
+app.get('/', function(req, res) {
+	res.sendFile('index.html');
+})
+
+app.get('*', function(req, res) {
+	res.sendStatus(404);
+})
+
+/*var server = http.createServer();
 
 server.on("request", function(req, res) {
 	//var date = new Date();
@@ -9,6 +20,6 @@ server.on("request", function(req, res) {
 
 	var urlData = url.parse(req.url, true);
 	res.end(JSON.stringify(urlData));
-});
+});*/
 
-server.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);

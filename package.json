@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/matikamien/capacitation-node/issues"
   },
-  "homepage": "https://github.com/matikamien/capacitation-node#readme"
+  "homepage": "https://github.com/matikamien/capacitation-node#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
